@@ -37,4 +37,8 @@ func (uc UserController) GetUser(w http.ResponseWriter, r *http.Request, p httpr
 	if err != nil {
 		fmt.Println(err)
 	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	fmt.Fprintf(w, "%s\n", uj)
 }

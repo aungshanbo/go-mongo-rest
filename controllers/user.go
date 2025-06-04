@@ -1,4 +1,4 @@
-package crontrollers
+package controllers
 
 import (
 	"encoding/json"

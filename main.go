@@ -11,7 +11,7 @@ import (
 func main() {
 
 	r := httprouter.New()
-	uc := controllers.NewUserController(getSxession())
+	uc := controllers.NewUserController(getSession())
 	r.GET("/user/:id", uc.GetUser)
 	r.POST("/user", uc.CreateUser)
 	r.DELETE("/user/:id", uc.DeleteUser)
